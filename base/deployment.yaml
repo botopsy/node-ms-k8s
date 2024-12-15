@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-ms
+  labels:
+    app: node-ms
+    backstage.io/kubernetes-id: node-ms
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-ms
+  template:
+    metadata:
+      labels:
+        app: node-ms
+    spec:
+      containers:
+        - name: node-ms
+          image: ghcr.io/botopsy/node-ms:latest
+          ports:
+            - containerPort: 3000

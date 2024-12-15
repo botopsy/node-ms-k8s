@@ -1,0 +1,12 @@
+resources:
+  - ../../base
+
+nameSuffix: -dev
+
+patches:
+  - target:
+      group: networking.k8s.io
+      version: v1
+      kind: Ingress
+      name: node-ms-ingress
+    path: ingress.yaml
