@@ -8,8 +8,6 @@ metadata:
   labels:
     backstage.io/kubernetes-id: node-ms
 spec:
-  selector:
-    app: node-ms
   rules:
   - host: node-ms.127.0.0.1.sslip.io
     http:
